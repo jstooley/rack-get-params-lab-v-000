@@ -19,6 +19,7 @@ class Application
         resp.write "#{cart}\n"
       end
     elsif req.path.match(/add/)
+      search_term = req.param["q"]
     else
       resp.write "Path Not Found"
     end
