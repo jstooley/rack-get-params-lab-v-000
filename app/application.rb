@@ -21,6 +21,8 @@ class Application
     elsif req.path.match(/add/)
       if search_term = req.param["q"]
         @@cart << req.param["q"]
+      else
+        resp.write "Item Not Found"
     else
       resp.write "Path Not Found"
     end
