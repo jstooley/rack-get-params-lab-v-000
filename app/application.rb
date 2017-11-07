@@ -23,6 +23,7 @@ class Application
         @@cart << req.param["q"]
       else
         resp.write "Item Not Found"
+      end
     else
       resp.write "Path Not Found"
     end
