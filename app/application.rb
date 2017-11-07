@@ -16,6 +16,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
       @@cart.each do |cart|
+        resp.write "#{cart}"
       end
     elsif req.path.match(/add/)
     else
